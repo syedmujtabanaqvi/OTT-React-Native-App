@@ -31,10 +31,12 @@ export default function Movies() {
           ItemSeparatorComponent={() => <View style={{ width: 10 }} />}
           style={{ marginTop: 20 }}
         />
+        <TouchableOpacity><Image style={styles.button1fonts}source={{uri:'https://www.iconpacks.net/icons/2/free-plus-icon-3107-thumb.png'}}></Image></TouchableOpacity>
 
         <TouchableOpacity style={styles.button1}>
           <Text style={styles.button1font}>Hello</Text>
         </TouchableOpacity>
+        
       </ImageBackground>
     </View>
   );
@@ -49,8 +51,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    bottom: 250,       // screen ke bottom se
+    bottom: 220,       // screen ke bottom se
     alignSelf: 'center' // screen ke center me horizontally
+  },
+  button1fonts:{
+        width: 50,
+    height: 50,
+    tintColor:'white',
+   marginLeft:-240,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 250,       // screen ke bottom se
+    alignSelf: 'center'
   },
   button1font: {
     color: 'black',
