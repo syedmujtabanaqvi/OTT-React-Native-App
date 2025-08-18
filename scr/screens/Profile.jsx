@@ -13,6 +13,7 @@ return(
   source={{uri:'https://i.pinimg.com/280x280_RS/c8/70/79/c87079b66cfe729d1affd9872107c42b.jpg'}}>
    
   </Image>
+  
    <Text style={{ marginRight:90,marginTop:20,color:'white',fontSize:18,  justifyContent: 'center',alignItems: 'center',}}>Syed Mujtaba ali </Text>
    <Text style={{ paddingLeft:17,marginTop:10,color:'white',fontSize:18,  justifyContent: 'center',
           alignItems: 'center',}}>SyedMujtaba526@gmail.com </Text>

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, FlatList,TouchableOpacity } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
@@ -59,7 +59,10 @@ renderItem={({item}) => (
         <FlatList
           data={film}
           renderItem={({ item }) => (
-            <Image style={styles.scooalimage} source={{ uri: item.image }} />
+              <TouchableOpacity 
+              onPress={() => navigation.navigate("Movies", { movieId: item.id })}
+            >
+            <Image style={styles.scooalimage} source={{ uri: item.image }} /></TouchableOpacity>
           )}
           keyExtractor={item => item.id.toString()}
           horizontal

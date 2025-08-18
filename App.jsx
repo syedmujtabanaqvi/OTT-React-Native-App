@@ -5,6 +5,7 @@ import Categories from './scr/screens/Categories';
 import Search from './scr/screens/Search';
 import Privacy from './scr/screens/Privacy';
 import Actioncat from './scr/screens/Actioncat';
+import Movies from './scr/screens/Movies';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -26,18 +27,21 @@ function SearchHeaderButton() {
 }
 
 // Profile Stack
+
+
+
 function ProfileStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Privacy" component={Privacy} />
+      <Stack.Screen name="Privacy" component={Privacy} /> 
       <Stack.Screen name="Actioncat" component={Actioncat} />
       <Stack.Screen name="Categories" component={Categories} />
     </Stack.Navigator>
   );
 }
 
-// Categories Stack
+
 function CategoriesStack() {
   return (
     <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: 'black' }, headerTintColor: 'white' }}>
@@ -58,6 +62,7 @@ function CategoriesStack() {
 // Home Stack (with Search inside Stack, not Tab)
 function HomeStack() {
   return (
+    
     <Stack.Navigator
       screenOptions={{
         headerStyle: { backgroundColor: 'black' },
@@ -73,6 +78,7 @@ function HomeStack() {
           headerRight: () => <SearchHeaderButton />, // ✅ Search button in header
         }}
       />
+      <Stack.Screen name="Movies" component={Movies} />
       <Stack.Screen name="Search" component={Search} options={{ headerShown: false }}/>
     </Stack.Navigator>
   );
