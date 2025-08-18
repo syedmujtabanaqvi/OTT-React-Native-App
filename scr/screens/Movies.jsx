@@ -17,12 +17,12 @@ export default function Movies() {
     <View style={{ flex: 1, backgroundColor: '#000' }}>
       <ImageBackground
         style={{ flex: 1, width: '100%' }}
-        source={{ uri: 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYlm2USpV879vt0eFRiZoOHpNB1QtpDLPk5lwniNCzH1JknJ5bpnLjDt1YOkFjUBXn5_RbRh8AyaJLmOMpplrdJYSvLCjF4VwfB7VsMsqQztWUCeP4Og3XxYpCh-AWbY7ONqXg.jpg?r=176' }}
-      >
+        source={{ uri: 'https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/66a4263d01a185d5ea22eeec_6408f6e7b5811271dc883aa8_batman-min.png' }}
+      > <Text style={styles.text}>Previews</Text>
         <FlatList
           data={film}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => navigation.navigate("Home", { movieId: item.id })}>
+            <TouchableOpacity onPress={() => navigation.navigate(" ", { movieId: item.id })}>
               <Image style={styles.scooalimage} source={{ uri: item.image }} />
             </TouchableOpacity>
           )}
@@ -32,10 +32,13 @@ export default function Movies() {
           style={{ marginTop: 20 }}
         />
         <TouchableOpacity><Image style={styles.button1fonts}source={{uri:'https://www.iconpacks.net/icons/2/free-plus-icon-3107-thumb.png'}}></Image></TouchableOpacity>
-
+<TouchableOpacity>
+  <Image style={styles.info} source={{uri:'https://cdn0.iconfinder.com/data/icons/leading-international-corporate-website-app-collec/16/Info-512.png'}}/>
+</TouchableOpacity>
         <TouchableOpacity style={styles.button1}>
           <Text style={styles.button1font}>Hello</Text>
         </TouchableOpacity>
+        
         
       </ImageBackground>
     </View>
@@ -51,8 +54,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    bottom: 220,       // screen ke bottom se
-    alignSelf: 'center' // screen ke center me horizontally
+    bottom: 235,      
+    alignSelf: 'center'
+    ,elevation: 7
   },
   button1fonts:{
         width: 50,
@@ -62,8 +66,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    bottom: 250,       // screen ke bottom se
+    bottom: 230,       // screen ke bottom se
     alignSelf: 'center'
+  },
+   info:{
+        width: 50,
+    height: 50,
+    tintColor:'white',
+   marginLeft:240,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 230,       // screen ke bottom se
+    alignSelf: 'center'
+    ,elevation: 12
   },
   button1font: {
     color: 'black',
@@ -74,5 +90,16 @@ const styles = StyleSheet.create({
     height: 170,
     borderRadius: 15,
     marginTop:460
+  }, 
+  text: {
+    fontSize:25,
+    color:'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 190,     
+    marginRight:290, 
+    alignSelf: 'center'
+    ,elevation: 12
   }
 });
