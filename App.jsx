@@ -40,14 +40,16 @@ function ProfileStack() {
       
       <Stack.Screen name="Profile" options={{
           headerShown: false,}}component={Profile} />
-      <Stack.Screen name="Privacy" component={Privacy} />
+      <Stack.Screen name="Privacy"  options={{ headerTintColor: 'white'  ,headerStyle: { backgroundColor: 'black' }
+ }}component={Privacy} />
      
       <Stack.Screen name="Actioncat" component={Actioncat} />
       <Stack.Screen name="Categories" component={Categories} />
-       <Stack.Screen name="Aboutus" options={{
-          headerShown: false,}}component={Aboutus} />
-              <Stack.Screen name="History" options={{
-          headerShown: false,}}component={History} />
+       <Stack.Screen name="Aboutus" options={{ headerTintColor: 'white'  ,headerStyle: { backgroundColor: 'black' }
+ }}component={Aboutus} />
+              <Stack.Screen name="History" options={{ 
+    headerTintColor: 'white'  ,headerStyle: { backgroundColor: 'black' }
+ }}component={History} />
     </Stack.Navigator>
   );
 }
@@ -87,7 +89,7 @@ function HomeStack() {
         component={Home}
         options={{
           title: 'Home',
-          headerRight: () => <SearchHeaderButton />, // ✅ Search button in header
+          headerRight: () => <SearchHeaderButton />, 
         }}
       />
       <Stack.Screen name="Videoplay" component={Videoplay} />
