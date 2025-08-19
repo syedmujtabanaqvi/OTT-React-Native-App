@@ -34,7 +34,7 @@ const film3 = [
                       horizontal
                       ItemSeparatorComponent={() => <View style={{ width: 10 }} />}/>
             
-            
+            <Text style={{fontSize:35,color:'white',marginTop:9}}>Favourite</Text>
                 {/* Film 2 */}
                 <FlatList
                   data={film3}
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     justifyContent:'center',
     alignContent:'center',
-   marginTop:20,
+   marginTop:4,
     marginBottom: 10,
     
   },
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignContent:'center',
     borderRadius: 15,
-    marginTop:20,
+    marginTop:6,
    marginBottom: 10,
    
   },
@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignContent:'center',
     borderRadius: 15,
-    marginTop:20,
-    marginBottom:100
+    marginTop:6,
+    marginBottom:20
     
   },  mainscooalimage:
   {

@@ -11,6 +11,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Videoplay from './scr/screens/Videoplay';
 import Fav from './scr/screens/Fav';
+import Aboutus from './scr/screens/Aboutus';
+import History from './scr/screens/History';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -35,10 +37,17 @@ function SearchHeaderButton() {
 function ProfileStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Privacy" component={Privacy} /> 
+      
+      <Stack.Screen name="Profile" options={{
+          headerShown: false,}}component={Profile} />
+      <Stack.Screen name="Privacy" component={Privacy} />
+     
       <Stack.Screen name="Actioncat" component={Actioncat} />
       <Stack.Screen name="Categories" component={Categories} />
+       <Stack.Screen name="Aboutus" options={{
+          headerShown: false,}}component={Aboutus} />
+              <Stack.Screen name="History" options={{
+          headerShown: false,}}component={History} />
     </Stack.Navigator>
   );
 }
@@ -67,6 +76,7 @@ function HomeStack() {
     
     <Stack.Navigator
       screenOptions={{
+        
         headerStyle: { backgroundColor: 'black' },
         headerTintColor: 'white',
         headerTitleStyle: { fontWeight: 'bold', fontSize: 29 },
@@ -113,6 +123,7 @@ function Tabnavigator() {
         name="ProfileTab"
         component={ProfileStack}
         options={{
+          
           title: 'Profile',
           headerShown: false,
           tabBarIcon: () => (
