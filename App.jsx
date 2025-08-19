@@ -37,19 +37,22 @@ function SearchHeaderButton() {
 function ProfileStack() {
   return (
     <Stack.Navigator>
-      
+
       <Stack.Screen name="Profile" options={{
-          headerShown: false,}}component={Profile} />
-      <Stack.Screen name="Privacy"  options={{ headerTintColor: 'white'  ,headerStyle: { backgroundColor: 'black' }
- }}component={Privacy} />
-     
+        headerShown: false,
+      }} component={Profile} />
+      <Stack.Screen name="Privacy" options={{
+        headerTintColor: 'white', headerStyle: { backgroundColor: 'black' }
+      }} component={Privacy} />
+
       <Stack.Screen name="Actioncat" component={Actioncat} />
       <Stack.Screen name="Categories" component={Categories} />
-       <Stack.Screen name="Aboutus" options={{ headerTintColor: 'white'  ,headerStyle: { backgroundColor: 'black' }
- }}component={Aboutus} />
-              <Stack.Screen name="History" options={{ 
-    headerTintColor: 'white'  ,headerStyle: { backgroundColor: 'black' }
- }}component={History} />
+      <Stack.Screen name="Aboutus" options={{
+        headerTintColor: 'white', headerStyle: { backgroundColor: 'black' }
+      }} component={Aboutus} />
+      <Stack.Screen name="History" options={{
+        headerTintColor: 'white', headerStyle: { backgroundColor: 'black' }
+      }} component={History} />
     </Stack.Navigator>
   );
 }
@@ -72,13 +75,12 @@ function CategoriesStack() {
   );
 }
 
-// Home Stack (with Search inside Stack, not Tab)
 function HomeStack() {
   return (
-    
+
     <Stack.Navigator
       screenOptions={{
-        
+
         headerStyle: { backgroundColor: 'black' },
         headerTintColor: 'white',
         headerTitleStyle: { fontWeight: 'bold', fontSize: 29 },
@@ -89,12 +91,12 @@ function HomeStack() {
         component={Home}
         options={{
           title: 'Home',
-          headerRight: () => <SearchHeaderButton />, 
+          headerRight: () => <SearchHeaderButton />,
         }}
       />
       <Stack.Screen name="Videoplay" component={Videoplay} />
       <Stack.Screen name="Movies" component={Movies} />
-      <Stack.Screen name="Search" component={Search} options={{ headerShown: false }}/>
+      <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }
@@ -109,7 +111,7 @@ function Tabnavigator() {
     >
       <Tab.Screen
         name="HomeTab"
-        component={HomeStack} // ✅ Home + Search in stack
+        component={HomeStack}
         options={{
           headerShown: false,
           tabBarIcon: () => (
@@ -125,7 +127,7 @@ function Tabnavigator() {
         name="ProfileTab"
         component={ProfileStack}
         options={{
-          
+
           title: 'Profile',
           headerShown: false,
           tabBarIcon: () => (
@@ -136,7 +138,7 @@ function Tabnavigator() {
           ),
         }}
       />
-      
+
       <Tab.Screen
         name="Fav"
         component={Fav}
