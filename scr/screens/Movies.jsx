@@ -22,7 +22,7 @@ export default function Movies() {
         <FlatList
           data={film}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => navigation.navigate(" ", { movieId: item.id })}>
+            <TouchableOpacity onPress={() => navigation.navigate("Videoplay", { movieId: item.id })}>
               <Image style={styles.scooalimage} source={{ uri: item.image }} />
             </TouchableOpacity>
           )}

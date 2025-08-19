@@ -9,6 +9,7 @@ import Movies from './scr/screens/Movies';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Videoplay from './scr/screens/Videoplay';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -78,6 +79,7 @@ function HomeStack() {
           headerRight: () => <SearchHeaderButton />, // ✅ Search button in header
         }}
       />
+      <Stack.Screen name="Videoplay" component={Videoplay} />
       <Stack.Screen name="Movies" component={Movies} />
       <Stack.Screen name="Search" component={Search} options={{ headerShown: false }}/>
     </Stack.Navigator>
