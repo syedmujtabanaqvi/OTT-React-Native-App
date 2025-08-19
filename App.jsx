@@ -10,6 +10,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Videoplay from './scr/screens/Videoplay';
+import Fav from './scr/screens/Fav';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -116,7 +117,22 @@ function Tabnavigator() {
           headerShown: false,
           tabBarIcon: () => (
             <Image
-              source={{ uri: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png' }}
+              source={{ uri: 'https://img.icons8.com/ios-filled/50/FFFFFF/user.png' }}
+              style={{ width: 25, height: 25, tintColor: 'white' }}
+            />
+          ),
+        }}
+      />
+      
+      <Tab.Screen
+        name="Fav"
+        component={Fav}
+        options={{
+          title: 'favourite',
+          headerShown: false,
+          tabBarIcon: () => (
+            <Image
+              source={{ uri: 'https://img.icons8.com/ios-filled/50/FFFFFF/like.png' }}
               style={{ width: 25, height: 25, tintColor: 'white' }}
             />
           ),
